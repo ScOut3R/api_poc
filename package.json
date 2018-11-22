@@ -5,5 +5,13 @@
   "dependencies": {
     "express": "^4.16.4",
     "log4js": "^3.0.6"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "should": "^13.2.3",
+    "supertest": "^3.3.0"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test ./node_modules/mocha/bin/_mocha;"
   }
 }

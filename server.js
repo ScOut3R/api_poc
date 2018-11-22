@@ -7,3 +7,5 @@ require('./config/express')(app);
 require('./routes')(app);
 
 app.listen(config.port);
+
+module.exports = app;
