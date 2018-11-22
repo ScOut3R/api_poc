@@ -1,3 +1,1 @@
-exports.health = (req, res, next) => {
-  return res.status(200).end();
-};
+exports.health = (req, res) => res.status(200).end();

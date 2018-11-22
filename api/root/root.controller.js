@@ -1,3 +1,1 @@
-exports.root = (req, res, next) => {
-  return res.send('Hello World!');
-};
+exports.root = (req, res) => res.send('Hello World!');
