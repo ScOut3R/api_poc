@@ -12,6 +12,6 @@
     "supertest": "^3.3.0"
   },
   "scripts": {
-    "test": "NODE_ENV=test ./node_modules/mocha/bin/_mocha;"
+    "test": "npm install && NODE_ENV=test ./node_modules/mocha/bin/_mocha;"
   }
 }
