@@ -1,7 +1,7 @@
 const version = require('../../package.json').version;
 const description = require('../../package.json').description;
 
-exports.metadata = (req, res, next) => {
+exports.metadata = (req, res) => {
   const response = {
     "api_poc": [
       {

@@ -1,6 +1,8 @@
+/* eslint no-process-env: "off" */
+
 const all = {
-  env: process.env.NODE_ENV || 'development',
-  port: process.env.PORT || 3000
+  'env': process.env.NODE_ENV || 'development',
+  'port': process.env.PORT || 3000
 };
 
 module.exports = all;

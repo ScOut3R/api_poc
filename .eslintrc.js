@@ -10,7 +10,6 @@ module.exports = {
     },
     "rules": {
         "accessor-pairs": "error",
-        "array-bracket-newline": "error",
         "array-bracket-spacing": "error",
         "array-callback-return": "error",
         "array-element-newline": "error",
@@ -48,7 +47,6 @@ module.exports = {
         "consistent-this": "error",
         "curly": "error",
         "default-case": "error",
-        "dot-location": "error",
         "dot-notation": "error",
         "eol-last": "error",
         "eqeqeq": "error",
@@ -230,11 +228,6 @@ module.exports = {
             "last"
         ],
         "sort-imports": "error",
-        "sort-keys": [
-            "error",
-            "desc"
-        ],
-        "sort-vars": "error",
         "space-before-blocks": "error",
         "space-before-function-paren": "error",
         "space-in-parens": [

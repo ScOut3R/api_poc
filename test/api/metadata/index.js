@@ -6,32 +6,32 @@ const description = require('../../../package.json').description;
 
 const url = '/metadata';
 
-describe(url, function () {
+describe(url, () => {
 
-  it('should respond with 200', function (done) {
+  it('should respond with 200', (done) => {
     request(app)
     .get(url)
     .expect(200, done);
   });
 
-  it('should respond with JSON', function (done) {
+  it('should respond with JSON', (done) => {
     request(app)
     .get(url)
     .set('Accept', 'application/json')
-    .expect('Content-Type', /json/)
+    .expect('Content-Type', /json/u)
     .expect(200, done);
   });
 
-  it('should return metadata', function (done) {
+  it('should return metadata', (done) => {
     request(app)
     .get(url)
     .expect(200)
-    .then(function (response) {
+    .then((response) => {
       response.body.api_poc[0].version.should.equal(version);
       response.body.api_poc[0].description.should.equal(description);
       done();
     })
-    .catch(function (error) {
+    .catch((error) => {
       done(error);
     });
   });
