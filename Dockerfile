@@ -8,7 +8,8 @@ RUN npm install --production
 
 ADD . .
 
-RUN npm build && \
+RUN apk --no-cache add git && \
+  npm run build && \
   rm -rf .git
 
 
@@ -16,7 +17,7 @@ FROM node:10-alpine
 
 WORKDIR /opt/app
 
-COPY --from=builder /usr/src/ /opt/app
+COPY --from=builder /usr/src/ .
 
 EXPOSE 3000
-CMD [ "server.js" ]
+CMD [ "node", "server.js" ]
