@@ -19,4 +19,4 @@ WORKDIR /opt/app
 COPY --from=builder /usr/src/ .
 
 EXPOSE 3000
-CMD [ "server.js" ]
+CMD [ "node", "server.js" ]
