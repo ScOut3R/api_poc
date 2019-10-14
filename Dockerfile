@@ -16,7 +16,7 @@ FROM node:10-alpine
 
 WORKDIR /opt/app
 
-COPY --from=builder /usr/src/ /opt/app
+COPY --from=builder /usr/src/ .
 
 EXPOSE 3000
 CMD [ "server.js" ]
