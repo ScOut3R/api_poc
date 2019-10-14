@@ -1,7 +1,7 @@
 # Node.js API Proof of Concept
 [![Build Status](https://travis-ci.org/ScOut3R/api_poc.svg?branch=master)](https://travis-ci.org/ScOut3R/api_poc)
 
-A [Node.js](https://nodejs.org) based proof of concept API to demonstrate [Express](https://expressjs.com) for the HTTP API, [Docker](https://www.docker.com) and [Docker Compose](https://docs.docker.com/compose/) for containerisation, [Mocha](https://mochajs.org/) for testing and [Travis CI](https://travis-ci.org/) for continuos integration.
+A [Node.js](https://nodejs.org) based proof of concept API to demonstrate [Express](https://expressjs.com) for the HTTP API, [Docker](https://www.docker.com) and [Docker Compose](https://docs.docker.com/compose/) for containerisation, [Mocha](https://mochajs.org/) for testing and [Travis CI](https://travis-ci.org/) for continuos integration. Docker images are built automatically from the master branch and are tagged `scout3r/api_poc:latest`.
 
 
 ## API
@@ -14,7 +14,7 @@ The API implements the following endpoints:
 
 * `/`: default response
 * `/health`: returns HTTP code _200_ if API is healthy
-* `/metadata`: returns metadata (version, description) of the API
+* `/status`: returns status (version, description, hash of last commit) of the API
 
 ### Deployment
 
@@ -49,3 +49,4 @@ docker-compose api run npm test
 * **API access is not secured**. Authentication and authorization is missing.
 * **API access it not encrypted**. The interface listens on HTTP, so an SSL reverse proxy is highly recommended for any deployments.
 * **Deployment is not prepared to scale**. The Docker Compose service definition deploys a single API instance. By using Docker Swarm as the target platform the configuration could be updated to deploy it as a scalable service.
+* **Missing proper error handling**. The API code is clearly missing proper error handling which should be resolved before wide-spread use.
