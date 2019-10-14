@@ -1,8 +1,8 @@
 const express = require('express');
-const controller = require('./metadata.controller');
+const controller = require('./status.controller');
 
 const router = express.Router();
 
-router.get('/', controller.metadata);
+router.get('/', controller.status);
 
 module.exports = router;
