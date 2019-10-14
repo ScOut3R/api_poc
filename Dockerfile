@@ -8,7 +8,8 @@ RUN npm install --production
 
 ADD . .
 
-RUN npm build && \
+RUN apk --no-cache add git && \
+  npm run build && \
   rm -rf .git
 
 
